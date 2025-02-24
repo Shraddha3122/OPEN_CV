@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Display</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        img { width: 400px; margin: 10px; border: 2px solid black; }
+        .hidden { display: none; }
+    </style>
+    <script>
+        function closeImages() {
+            document.getElementById('color-img').classList.add('hidden');
+            document.getElementById('gray-img').classList.add('hidden');
+        }
+    </script>
+</head>
+<body>
+    <h1>Image Display using OpenCV</h1>
+    <h3>Color Image</h3>
+    <img id="color-img" src="data:image/jpeg;base64,{{ color_img }}" alt="Color Image">
+    
+    <h3>Grayscale Image</h3>
+    <img id="gray-img" src="data:image/jpeg;base64,{{ gray_img }}" alt="Grayscale Image">
+    
+    <br><br>
+    <button onclick="closeImages()">Close Images</button>
+</body>
+</html>
